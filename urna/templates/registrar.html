@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'registrar.css' %}">
+  <script src="{% static 'registrar.js' %}"></script>
+</head>
+<body>
+<title>Cadastrar</title>
+
+</body>
+</html>
+
+<div class="login-page">
+    <div class="form">
+      <form class="register-form" method="post" action="save/">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Cadastrar-se</button>
+        <p class="message">Já tem login? <a href="../login/0">Entrar</a></p>
+      </form>
+    </div>
+  </div>
