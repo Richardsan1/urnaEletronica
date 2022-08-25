@@ -1,0 +1,1 @@
+fetch("localhost:8000/api/candidates")

@@ -43,9 +43,10 @@ def register_view_POST(request):
 def vote_view_GET(request):
     cand = Candidate.objects.filter()
     if request.session.get('logged_in_status'):
-        context ={}
-        for i in range(0, len(cand)):
-            context.update({i : cand[i]})
-        return render(request, 'vote.html', {'context' : context})
+        return render(request, 'vote.html')
     else:
         return HttpResponseRedirect('../../login/0')
+
+def vote_view_GET_candidates(request):
+    print(request)
+    HttpResponse("foda")

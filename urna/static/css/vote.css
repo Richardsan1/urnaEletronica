@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border: 2px red solid;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+button{
+    margin: 1rem;
+    width: 10rem;
+    height: 2.5rem;
+}
+h1{
+    margin-bottom: 12rem;
+}
+input{
+    width: 22rem;
+    height: 2.5rem;
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: row;
+
+    border: 2px black solid;
+    
+}
+.candidato{
+    border: 2px blue solid;
+}

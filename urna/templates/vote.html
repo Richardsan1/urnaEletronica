@@ -5,10 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/vote.css' %}">
+    <title>Vote</title>
 </head>
 <body>
-    <h1>vota ai po</h1>
-    <img src='' alt="">
+    <form>
+        <h1>Presidente</h1>
+        <input type="text" pattern="[0-9]">
+        <div class="buttons">
+            <button type="submit">Confirmar</button>
+            <button type="submit">Cancelar</button>
+        </div>
+    </form>
+    <div class="candidato">
+        <h1>.</h1>
+    </div>
 </body>
 </html>

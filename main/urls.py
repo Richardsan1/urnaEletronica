@@ -24,4 +24,5 @@ urlpatterns = [
     path('register/<err>', views.register_view_GET),
     path('register/save/', views.register_view_POST),
     path('', views.vote_view_GET),
+    path('api/candidates/', views.vote_view_GET_candidates),
 ]
