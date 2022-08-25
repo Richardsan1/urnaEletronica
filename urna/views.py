@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from urna.forms import register, loginForm
 from urna.models import Citizen, Candidate
+import json
 
 def login_view_GET(request, err):
     form = loginForm()
@@ -48,5 +49,16 @@ def vote_view_GET(request):
         return HttpResponseRedirect('../../login/0')
 
 def vote_view_GET_candidates(request):
-    print(request)
-    HttpResponse("foda")
+    form_id = request.GET.get('id')
+
+    QueryCand = Candidate.objects.filter(id=form_id)
+    if QueryCand:
+        cand = {
+            'name': QueryCand[0].name,
+            'photo': QueryCand[0].photo,
+            'party': QueryCand[0].party,
+            'description': QueryCand[0].description,
+        }
+        return HttpResponse(cand)
+    else:
+        return HttpResponse(json.dump({'error': 'error'}), status=400, content_type='application/json')
