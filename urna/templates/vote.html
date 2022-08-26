@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/vote.css' %}">
+    <script src="{% static 'js/vote.js' %}"></script>
     <title>Vote</title>
 </head>
 <body>
     <form>
         <h1>Presidente</h1>
-        <input type="text" pattern="[0-9]">
+        <input type="text" pattern="[0-9]" onchange="getCandidate(this)">
         <div class="buttons">
             <button type="submit">Confirmar</button>
             <button type="submit">Cancelar</button>

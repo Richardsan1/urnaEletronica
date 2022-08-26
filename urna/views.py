@@ -49,16 +49,17 @@ def vote_view_GET(request):
         return HttpResponseRedirect('../../login/0')
 
 def vote_view_GET_candidates(request):
-    form_id = request.GET.get('id')
 
+    form_id = request.GET.get('id')
     QueryCand = Candidate.objects.filter(id=form_id)
+    
     if QueryCand:
         cand = {
             'name': QueryCand[0].name,
-            'photo': QueryCand[0].photo,
+            'photo': str(QueryCand[0].photo),
             'party': QueryCand[0].party,
             'description': QueryCand[0].description,
         }
-        return HttpResponse(cand)
+        return HttpResponse(json.dumps(cand, indent=4), content_type='application/json')
     else:
-        return HttpResponse(json.dump({'error': 'error'}), status=400, content_type='application/json')
+        return HttpResponse(json.dumps({'error': 'error'}, indent=4), status=400, content_type='application/json')
