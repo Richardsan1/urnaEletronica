@@ -3,7 +3,6 @@ from django.db import models
 class Citizen(models.Model):
     rm = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=50)
-    password = models.CharField(max_length=20)
     voted = models.BooleanField(default=False)
 
 class Candidate(models.Model):

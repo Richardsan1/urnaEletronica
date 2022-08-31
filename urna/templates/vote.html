@@ -9,17 +9,38 @@
     <script src="{% static 'js/vote.js' %}"></script>
     <title>Vote</title>
 </head>
+
+<script>
+
+    async function getCandidate(x){
+        let candidate = await fetch(`/api/candidates?id=${x.value}`);
+        candidate.json()
+        .then(res => 
+            {
+                document.getElementById("name").innerHTML = res.name;
+                document.getElementById("party").innerHTML = res.party;
+                document.getElementById("image").src = res.photo;
+                document.getElementById("description").innerHTML = res.description;
+            }
+        );
+    }
+</script>
+
+
 <body>
     <form>
         <h1>Presidente</h1>
-        <input type="text" pattern="[0-9]" onchange="getCandidate(this)">
+        <input type="text" pattern="[0-9]" onkeyup="getCandidate(this)" id="buscaCad" required />
         <div class="buttons">
             <button type="submit">Confirmar</button>
             <button type="submit">Cancelar</button>
         </div>
     </form>
     <div class="candidato">
-        <h1>.</h1>
+        <img id="image" src="" alt="Foto do candidato">
+        <h1 id="name">.</h1>
+        <h2 id="party">.</h2>
+        <p id="description">.</p>
     </div>
 </body>
 </html>
