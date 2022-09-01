@@ -25,4 +25,5 @@ urlpatterns = [
     path('register/save/', views.register_view_POST),
     path('', views.vote_view_GET),
     path('api/candidates/', views.vote_view_GET_candidates),
+    path('logout/', views.logout_view_GET),
 ]

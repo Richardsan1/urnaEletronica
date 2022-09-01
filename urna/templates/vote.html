@@ -9,17 +9,22 @@
     <script src="{% static 'js/vote.js' %}"></script>
     <title>Vote</title>
 </head>
+
 <body>
     <form>
         <h1>Presidente</h1>
-        <input type="text" pattern="[0-9]" onchange="getCandidate(this)">
+        <input type="text" pattern="[0-9]" oninput="getCandidate(this)">
         <div class="buttons">
             <button type="submit">Confirmar</button>
             <button type="submit">Cancelar</button>
         </div>
     </form>
+
     <div class="candidato">
-        <h1>.</h1>
+        <img src="#" id="candidateImg">
+        <h1 id="candidateName"></h1>
+        <p id="candidateParty"></p>
+        <p id="candidateDesc"></p>
     </div>
 </body>
 </html>

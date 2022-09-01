@@ -1,3 +1,4 @@
+/* ajuste no css feito por Vargas*/
 *{
     margin: 0;
     padding: 0;
@@ -6,8 +7,9 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    border: 2px red solid;
+    margin-top: 10vh;
+   
+    margin-left: 1vw;
 }
 .buttons{
     display: flex;
@@ -21,7 +23,7 @@ button{
     height: 2.5rem;
 }
 h1{
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
 }
 input{
     width: 22rem;
@@ -37,5 +39,15 @@ body{
     
 }
 .candidato{
-    border: 2px blue solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    margin-left: 20px;
+    background-color: rgb(184, 184, 184);
+    width: 500px;
+}
+.candidato img
+{
+    width: 500px;
 }
