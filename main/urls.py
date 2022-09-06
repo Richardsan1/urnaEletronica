@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from urna import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/<err>', views.login_view_GET),
+    path('login/auth/', views.login_view_POST),
+    path('register/<err>', views.register_view_GET),
+    path('register/save/', views.register_view_POST),
+    path('', views.vote_view_GET),
+    path('api/candidates/', views.vote_view_GET_candidates),
+    path('logout/', views.logout_view_GET),
 ]

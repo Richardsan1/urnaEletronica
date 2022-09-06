@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <script src="{% static 'js/login.js' %}"></script>
+</head>
+<body>
+<title>Conectar</title>
+
+</body>
+</html>
+
+
+<div class="login-page">
+  <div class="form">
+    <form class="register-form" action="auth/" method="post">
+      {% csrf_token %}
+      {{form}}
+      <button type="submit">Conectar-se</button>
+      <p class="message">Não tem login? <a href="../register/0">Cadastrar</a></p>
+    </form>
+  </div>
+</div>
