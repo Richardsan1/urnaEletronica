@@ -11,12 +11,15 @@
 </head>
 
 <body>
-    <form>
+    <form action="vote/" method="post">
+        {% csrf_token %}
         <h1>Presidente</h1>
-        <input type="text" pattern="[0-9]" oninput="getCandidate(this)">
+        <input type="text" pattern="[0-9]" oninput="getCandidate(this)" id="vote">
+        <div class="hidden">
+            {{form.as_p}}
+        </div>
         <div class="buttons">
             <button type="submit">Confirmar</button>
-            <button type="submit">Cancelar</button>
         </div>
     </form>
 
