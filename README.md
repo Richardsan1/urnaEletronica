@@ -36,4 +36,6 @@ python manage.py runserver
 <ul>
 <li><a href="https://github.com/ReidakaiMFZ">Richard Barbosa Sanches</a></li>
 <li><a href="https://github.com/freitaszbtw">Gabriel Freitas</a></li>
+<li><a href="https://github.com/Var-Argas">Juan Vargas</a></li>
+</ul>
 
