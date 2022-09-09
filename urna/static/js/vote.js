@@ -22,9 +22,3 @@ async function getCandidate(x){
     }); 
     
 }
-
-function returnValues(){
-    document.getElementById('id_citizen').value = 1;
-    document.getElementById('id_candidate').value = document.getElementById('vote').value;
-    document.getElementById('id_second_turn').value = false;
-}
