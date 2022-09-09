@@ -13,12 +13,7 @@ class Candidate(models.Model):
     description = models.CharField(max_length=100)
     photo = models.ImageField(upload_to='photos')
 
-class FirstTurn(models.Model):
-    id = models.IntegerField(primary_key=True)
-    candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
-    citizen = models.ForeignKey(Citizen, on_delete=models.CASCADE)
-
-class SecondTurn(models.Model):
-    id = models.IntegerField(primary_key=True)
-    candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
-    citizen = models.ForeignKey(Citizen, on_delete=models.CASCADE)
+class Turns(models.Model):
+    candidate_id = models.ForeignKey(Candidate, on_delete=models.CASCADE)
+    citizen_id = models.ForeignKey(Citizen, on_delete=models.CASCADE)
+    second_turn = models.BooleanField(default=False)
