@@ -19,11 +19,12 @@ from urna import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/<err>', views.login_view_GET),
-    path('login/auth/', views.login_view_POST),
-    path('register/<err>', views.register_view_GET),
-    path('register/save/', views.register_view_POST),
-    path('', views.vote_view_GET),
-    path('vote/', views.vote_view_POST),
-    path('api/candidates/', views.vote_view_GET_candidates),
+    path('login/<err>', views.login_GET),
+    path('login/auth/', views.login_POST),
+    path('register/<err>', views.register_GET),
+    path('register/save/', views.register_POST),
+    path('', views.vote_GET),
+    path('vote/', views.vote_POST),
+    path('api/candidates/', views.vote_GET_candidates),
+    path('logout/', views.logout_GET),
 ]

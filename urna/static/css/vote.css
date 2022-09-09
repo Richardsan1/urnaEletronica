@@ -8,7 +8,6 @@ form{
     flex-direction: column;
     align-items: center;
     margin-top: 10vh;
-   
     margin-left: 1vw;
 }
 .buttons{
@@ -34,12 +33,8 @@ body{
     height: 100vh;
     width: 100vw;
     flex-direction: row;
-
-    border: 2px black solid;
-    
 }
-.candidato{
-    display: flex;
+#candidato{
     flex-direction: column;
     align-items: center;
     margin-top: 10vh;
@@ -47,7 +42,7 @@ body{
     background-color: rgb(184, 184, 184);
     width: 500px;
 }
-.candidato img
+#candidato img
 {
     width: 500px;
 }
