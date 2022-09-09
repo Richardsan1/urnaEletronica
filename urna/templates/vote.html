@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,20 +14,22 @@
     <form action="vote/" method="post">
         {% csrf_token %}
         <h1>Presidente</h1>
-        <input type="text" pattern="[0-9]" oninput="getCandidate(this)" id="vote">
-        <div class="hidden">
-            {{form.as_p}}
-        </div>
+        <input type="text" pattern="[0-9]" oninput="getCandidate(this)" id="vote" name="vote">
         <div class="buttons">
             <button type="submit">Confirmar</button>
         </div>
     </form>
 
-    <div class="candidato">
-        <img src="#" id="candidateImg">
+    <div id="candidato">
+        <img src="#" id="candidateImg" onload="returnValues()">
         <h1 id="candidateName"></h1>
         <p id="candidateParty"></p>
         <p id="candidateDesc"></p>
     </div>
 </body>
+
+<script>
+    document.getElementById("candidato").style.display = "none";
+</script>
+
 </html>

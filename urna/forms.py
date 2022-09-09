@@ -10,11 +10,3 @@ class register(forms.Form):
     class meta:
         model = Citizen()
         fields = ['name', 'rm']
-    
-class vote (forms.Form):
-    candidate = forms.IntegerField(label='ID do candidato')
-    citizen = forms.IntegerField(label='ID do cidadão')
-    second_turn = forms.BooleanField(label='Segundo turno')
-    class meta:
-        model = Turns()
-        fields = ['candidate_id', 'citizen_id', 'second_turn']

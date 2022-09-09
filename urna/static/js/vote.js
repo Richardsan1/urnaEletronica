@@ -10,12 +10,14 @@ async function getCandidate(x){
                 document.getElementById("candidateImg").src = json.photo;
                 document.getElementById("candidateDesc").innerHTML = json.description;
                 document.getElementById("candidateParty").innerHTML = "Partido: "+json.party;
+                document.getElementById("candidato").style.display = "flex";
             }
             else{
                 document.getElementById("candidateName").innerHTML = "";
                 document.getElementById("candidateImg").src = "";
                 document.getElementById("candidateDesc").innerHTML = "";
                 document.getElementById("candidateParty").innerHTML = "";
+                document.getElementById("candidato").style.display = "none";
             }
     }); 
     
