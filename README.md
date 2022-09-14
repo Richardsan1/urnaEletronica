@@ -12,6 +12,14 @@
 </ul>
 <br/>
 
+## 📦 Pip Dependencies
+
+<ul>
+<li>python-dotenv</li>
+<li>django</li>
+<li>pillow</li>
+</ul>
+
 ## 🔨 Installation
 
 <p>To install the project, run the following command:</p>
@@ -26,7 +34,8 @@ python manage.py runserver
 
 ## ⚡ Usage
 
-<p>To use the project, go to the <a href="http://localhost:8000">localhost:8000</a> address and login with the username and password <code>admin</code> and <code>admin</code>.</p>
+<p>To use the project, go to the <a href="http://127.0.0.1:8000">127.0.0.1:8000</a> address in your browser, and click in "votar" to go to the login page, then you can vote.</p>
+</p>
 
 <br/>
 
@@ -34,6 +43,8 @@ python manage.py runserver
 
 <p>This project was developed by: </p>
 <ul>
+<li><a href="https://github.com/freitaszbtw">Gabriel da Silva Freitas</a></li>
+<li><a href="https://github.com/var-argas">Juan Vargas Macri</a></li>
+<li>Pedro Henrique Morais Ferrarezzi</li>
 <li><a href="https://github.com/ReidakaiMFZ">Richard Barbosa Sanches</a></li>
-<li><a href="https://github.com/freitaszbtw">Gabriel Freitas</a></li>
 
