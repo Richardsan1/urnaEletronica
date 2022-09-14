@@ -1,0 +1,35 @@
+{% load static %}
+<!-- feito por freitas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/candidatos.css' %}">
+    <title>Candidatos</title>
+</head>
+<body>
+    <h1>{{turn}}</h1>
+    <br>
+    <div id="candidatos">
+        {% for candidato in candidatos %}   
+        <div class="candidato">
+            <div class="imagem">
+                <img src="{{candidato.photo}}" alt="">
+            </div>
+            <div>
+                <h1>{{ candidato.name }} n°: {{candidato.id}}</h1>
+                <h4>partido: {{ candidato.party }}</h4>
+                <br>
+                <h4>{{ candidato.description }}</h4>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <br>
+    {% if notEnded %}
+        <a href="../login/0"><button>votar</button></a>
+    {% endif %}
+</body>
+</html>

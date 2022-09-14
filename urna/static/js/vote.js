@@ -6,10 +6,10 @@ async function getCandidate(x){
         .then(response => response.json()) 
         .then(json => {
             if (json.error == undefined){
-                document.getElementById("candidateName").innerHTML = "Nome: "+json.name;
+                document.getElementById("candidateName").innerHTML = json.name;
                 document.getElementById("candidateImg").src = json.photo;
                 document.getElementById("candidateDesc").innerHTML = json.description;
-                document.getElementById("candidateParty").innerHTML = "Partido: "+json.party;
+                document.getElementById("candidateParty").innerHTML = json.party;
                 document.getElementById("candidato").style.display = "flex";
             }
             else{
@@ -21,10 +21,4 @@ async function getCandidate(x){
             }
     }); 
     
-}
-
-function returnValues(){
-    document.getElementById('id_citizen').value = 1;
-    document.getElementById('id_candidate').value = document.getElementById('vote').value;
-    document.getElementById('id_second_turn').value = false;
 }
