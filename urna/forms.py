@@ -1,6 +1,6 @@
 from django import forms
-from urna.models import Citizen, Turns
-
+from urna.models import Citizen
+# richard modelou os forms
 class loginForm(forms.Form):
     rm = forms.CharField(max_length=10, label='Registro de Matrícula')
 
