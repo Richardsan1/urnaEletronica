@@ -34,7 +34,7 @@ python manage.py runserver
 
 <p>This project was developed by: </p>
 <ul>
-<li><a href="https://github.com/ReidakaiMFZ">Richard Barbosa Sanches</a></li>
+<li><a href="https://github.com/Richardsan1">Richard Barbosa Sanches</a></li>
 <li><a href="https://github.com/freitaszbtw">Gabriel Freitas</a></li>
 <li><a href="https://github.com/Var-Argas">Juan Vargas</a></li>
 </ul>
